@@ -1,4 +1,4 @@
-import BarChart from "@/components/viz/BarChart";
+import PieChart from "@/components/viz/PieChart";
 
 export default function Home() {
   const data = [
@@ -15,9 +15,9 @@ export default function Home() {
         <h1 className="text-4xl font-bold">D3.js Visualization Project</h1>
       </div>
 
-      <div className="w-full max-w-2xl bg-white p-8 rounded-lg shadow-md dark:bg-zinc-800">
-        <h2 className="text-2xl font-semibold mb-6 text-center">Sample Bar Chart</h2>
-        <BarChart data={data} />
+      <div className="w-full max-w-2xl bg-white text-black dark:bg-zinc-800 dark:text-white p-8 rounded-lg shadow-md">
+        <h2 className="text-2xl font-semibold mb-6 text-center">Sample Pie Chart</h2>
+        <PieChart data={data} />
       </div>
     </main>
   );
