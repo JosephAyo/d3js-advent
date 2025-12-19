@@ -48,17 +48,13 @@ const PieChart: React.FC<PieChartProps> = ({ data }) => {
       .outerRadius(radius - 10)
       .innerRadius(0);
 
-    const label = d3.arc<d3.PieArcDatum<DataPoint>>()
-      .outerRadius(radius - 40)
-      .innerRadius(radius - 40);
-
     const arc = g.selectAll('.arc')
       .data(pie(data))
       .enter().append('g')
       .attr('class', 'arc');
 
     arc.append('path')
-      .attr('d', path as any)
+      .attr('d', d => path(d))
       .attr('fill', d => color(d.data.label) as string)
       .attr('stroke', '#ffffff')
       .style('stroke-width', '2px');
