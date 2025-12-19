@@ -16,7 +16,7 @@ export default function Home() {
       </div>
 
       <div className="w-full max-w-2xl bg-white text-black dark:bg-zinc-800 dark:text-white p-8 rounded-lg shadow-md">
-        <h2 className="text-2xl font-semibold mb-6 text-center">Broken Chart</h2>
+        <h2 className="text-2xl font-semibold mb-6 text-center">Sample Pie Chart</h2>
         <PieChart data={data} />
       </div>
     </main>
